@@ -1,0 +1,41 @@
+<!-- <pre>{{allusers|json}}</pre> -->
+
+
+  
+  <table class="table mt-4 " >
+    <tr>
+      <th>firstName</th>
+      <th>age</th>
+      <th>email</th>
+      <th>phone</th>
+      <th>birthDate</th>
+      <th>Photo</th>
+      <th>address</th>
+    </tr>
+    <tr *ngFor="let user of allusers ">
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.age }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.phone }}</td>
+      <td>{{ user.birthDate }}</td>
+      <td>
+        <img
+          height="60px"
+          [src]="user.image"
+          alt="no image"
+          class="contact_image"
+        />
+      </td>
+      <td>{{ user.address.address }}</td>
+    </tr>
+  </table>
+<!--  id?:number
+    firstName?:string
+    age?:number
+    email?:string
+    image?:string
+    mobile?:string
+    address?:string
+    title?:string
+    groupId?:string
+} -->
